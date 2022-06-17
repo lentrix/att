@@ -31,4 +31,18 @@ class HelloController extends Controller
 
         return ExitCode::OK;
     }
+
+    public function actionCreateUser($name, $full_name, $password) {
+        $usr = new \app\models\AppUser();
+        $usr->username = $name;
+        $usr->setPassword($password);
+        $usr->full_name = $full_name;
+        $usr->save();
+    }
+
+    public function actionUpdateUserPassword($name, $password) {
+        $usr = \app\models\AppUser::findByUsername($name);
+	$usr->setPassword($password);
+	$usr->save();
+    }
 }

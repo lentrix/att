@@ -29,7 +29,7 @@ class CheckInOut extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'check_time', 'active'], 'required'],
+            [['user_id', 'check_time'], 'required'],
             [['id', 'user_id'], 'integer'],
             [['check_time'], 'safe'],
             [['check_type'], 'string', 'max' => 1],

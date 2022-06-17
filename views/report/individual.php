@@ -161,7 +161,7 @@ $this->title = "MDC Attendance System | Individual";
                                     ['/report/toggle-active', 'id'=>$dout->id, 'user_id'=>$formData->user_id,'from'=>$formData->from,'to'=>$formData->to],
                                     ['class'=>'noprint', 'style'=>'color: #888']
                                 ); ?>
-                                <span class="discard"><?= date('g:i:s a', strtotime($out->check_time)); ?></span>
+                                <span class="discard"><?= date('g:i:s a', strtotime($dout->check_time)); ?></span>
                             </div>
                             <?php endforeach; ?>
                         </td>
